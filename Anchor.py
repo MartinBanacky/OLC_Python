@@ -4,7 +4,9 @@ import webbrowser
 
 class Anchor(Label):
     def __init__(self, master, text, url, *args, **kwargs):
-        super().__init__(master, text=text, fg='blue', cursor='hand2', *args, **kwargs)
+        bg_color = master.cget('background')
+
+        super().__init__(master, text=text, fg='blue', bg=bg_color, cursor='hand2', *args, **kwargs)
 
         self.url = url
         self.bind("<Button-1>", self.open_link)

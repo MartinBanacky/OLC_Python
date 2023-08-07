@@ -16,5 +16,8 @@ class Html(Tk):
     def pack_all_children(self):
         # Call pack() on all child widgets
         for widget in self.child_widgets:
-            widget.pack(anchor='center', expand = True)
+            widget.pack( expand = True)
             #widget.pack(anchor='w')
+
+
+#self.master.event_generate("<Button-1>", x=event.x, y=event.y)  - ak klikneme na vlozit tak nam vypise aj cislo formulara
