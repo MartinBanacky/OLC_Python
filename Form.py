@@ -1,8 +1,7 @@
-from tkinter import Frame
+from MyFrame import MyFrame
 
 
 """Form = An area that accepts user input."""
-class Form(Frame):
+class Form(MyFrame):
     def __init__(self, master, **kwargs):
-        bg_color = master.cget('background')
-        super().__init__(master, **kwargs,bg = bg_color)
+        super().__init__(master, **kwargs)
