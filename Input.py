@@ -4,6 +4,11 @@ from tkinter import Entry
 class Input(Entry):
     def __init__(self, master, *args, **kwargs):
         super().__init__(master, *args, **kwargs)
+
+    def reset_to_default(self):
+        text_input = self.get()
+        print(text_input)
+        self.delete(0, 'end')
         # Additional initialization for the Input widget, if needed
 
 

@@ -4,6 +4,7 @@ from Form import Form
 from Img import Img
 from Input import Input
 from Paragraph import Paragraph
+from PrintButton import PrintButton
 from Select import Select
 from Html import Html
 
@@ -11,7 +12,7 @@ from Html import Html
 
 html = Html("1280x720")
 
-div_body = Div(html, highlightbackground="black", highlightthickness=2)
+div_body = Div(html, highlightbackground="grey", highlightthickness=2)
 
 div_body.configure(bg="lightgrey")
 
@@ -26,8 +27,6 @@ div_name = Div(form_info)
 p_name = Paragraph(div_name, "Name:")
 input_name = Input(div_name)
 
-
-
 p_gender = Paragraph(form_info, "Choose gender:")
 select_gender = Select(form_info, ["Man", "Woman"])
 
@@ -39,10 +38,11 @@ div_height = Div(form_info)
 p_height = Paragraph(div_height, "Height:")
 input_height = Input(div_height)
 
+print_button = PrintButton(div_body,"Submit")
+
 hyperlink = Anchor(div_body, text="Look me up on LinkedIn", url="https://www.linkedin.com/in/martinbanacky/")
 
-
-
+html.bind("<<ClickEvent>>", html.on_button_click)
 
 html.add_child(div_body)
 
@@ -67,6 +67,8 @@ div_age.add_child(input_age)
 form_info.add_child(div_height)
 div_height.add_child(p_height)
 div_height.add_child(input_height)
+
+div_body.add_child(print_button)
 
 div_body.add_child(hyperlink)
 
