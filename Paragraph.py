@@ -1,4 +1,10 @@
+# -- Copyright  2023 Martin Baňacký
+
+# -- All rights reserved.
+
 from MyLabel import MyLabel
+
+"""Paragraph element"""
 
 
 class Paragraph(MyLabel):

@@ -1,5 +1,11 @@
+# -- Copyright  2023 Martin Baňacký
+
+# -- All rights reserved.
+
 from tkinter import PhotoImage
 from MyLabel import MyLabel
+
+"""Img element"""
 
 
 class Img(MyLabel):
